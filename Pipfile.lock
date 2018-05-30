@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d36186874857fc26c358d95be864cc29bb40b1ff83b372f0c369911da52af93d"
+            "sha256": "cb1c4ce063fbac77bcfbca4836374f66915d39402b894c923a16fc624bd582ce"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -146,6 +146,20 @@
                 "sha256:99a8ca03e29851d96616ad0404b4aad7d9ee16f25c9f9708a11faf2810f7b226"
             ],
             "version": "==2.18"
+        },
+        "pygithub": {
+            "hashes": [
+                "sha256:8a87bc0fbd0b70c2f12911f7f25a493cd13371bc1bbac6c548cc61b69e7d006f"
+            ],
+            "index": "pypi",
+            "version": "==1.39"
+        },
+        "pyjwt": {
+            "hashes": [
+                "sha256:30b1380ff43b55441283cc2b2676b755cca45693ae3097325dea01f3d110628c",
+                "sha256:4ee413b357d53fd3fb44704577afac88e72e878716116270d722723d65b42176"
+            ],
+            "version": "==1.6.4"
         },
         "pyopenssl": {
             "hashes": [
