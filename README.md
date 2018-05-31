@@ -3,13 +3,13 @@
 ### Usage
 Configure a github webhook to send push events to https://nameless-mountain-59891.herokuapp.com/payload
 
-Riposte will:
-- get all TODO issues for a repo
-- download all changed files
-- parse out TODO comments via regex
-- compute SHA1 hash of each comment
-- if the hash is already present, don't make a new issue
-- otherwise, create a new issue with the TODO statement as the title and the hash as the body
+On every code change riposte will:
+1. get all TODO issues for a repo
+2. download all changed files
+3. parse out TODO comments via regex
+4. compute SHA1 hash of each comment
+5. if the hash is already present, don't make a new issue
+6. otherwise, create a new issue with the TODO statement as the title and the hash as the body
 
 Deployed to Heroku at https://nameless-mountain-59891.herokuapp.com/
 
