@@ -15,7 +15,7 @@ Deployed to Heroku at https://nameless-mountain-59891.herokuapp.com/
 
 ### FAQ
 Q: what github user does this run as?  
-A: me  
+A: [ripostebot](https://github.com/ripostebot)  
 Q: what permissions does this need?  
 A: Issues: read/write; issue labels: read/write; repo contents: read  
 Q: Why "riposte"?  
