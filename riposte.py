@@ -14,6 +14,11 @@ app = Flask(__name__)
 
 GIT_CLIENT = Github(os.environ['GH_USER'], os.environ['GH_PASSWORD'])
 
+LANGUAGE_REGEXES = {
+    '.py' : b'# TODO: (.*)',
+    '.go' : b'// TODO: (.*)',
+}
+
 @app.route('/ping', methods=['GET'])
 def ping():
     """
@@ -65,5 +70,8 @@ def get_todo_from_file(repo, filename: str) -> list:
     get_todo_from_file : get contents of file from github
     search contents for a todo statement in a comment
     """
+    _, extension = os.path.splitext(filename)
+    if extension not in LANGUAGE_REGEXES:
+        return []
     contents = base64.b64decode(repo.get_contents(filename).content)
-    return re.findall(b'# TODO: (.*)', contents)
+    return re.findall(LANGUAGE_REGEXES[extension], contents)
