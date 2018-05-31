@@ -14,6 +14,13 @@ app = Flask(__name__)
 
 GIT_CLIENT = Github(os.environ['GH_USER'], os.environ['GH_PASSWORD'])
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    """
+    set up ping route to check if service is alive
+    """
+    return 'pong'
+
 @app.route('/payload', methods=['POST'])
 def payload():
     """
